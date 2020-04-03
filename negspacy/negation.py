@@ -44,9 +44,7 @@ class Negex:
     ):
         if not language in LANGUAGES:
             raise KeyError(
-                "{} not found in languages termset. ".format(language)
-                "Ensure this is a supported language or specify "
-                "your own termsets when initializing Negex."
+                "{} not found in languages termset. Ensure this is a supported language or specify your own termsets when initializing Negex.".format(language)
             )
         termsets = LANGUAGES[language]
         if not Span.has_extension("negex"):
