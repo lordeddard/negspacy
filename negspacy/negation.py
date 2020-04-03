@@ -44,7 +44,7 @@ class Negex:
     ):
         if not language in LANGUAGES:
             raise KeyError(
-                f"{language} not found in languages termset. "
+                "{} not found in languages termset. ".format(language)
                 "Ensure this is a supported language or specify "
                 "your own termsets when initializing Negex."
             )
@@ -166,7 +166,7 @@ class Negex:
                     terminating.append((match_id, start, end))
                 else:
                     logging.warnings(
-                        f"phrase {doc[start:end].text} not in one of the expected matcher types."
+                        "phrase {} not in one of the expected matcher types.".format(doc[start:end].text)
                     )
         return preceding, following, terminating
 
